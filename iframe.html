@@ -8,7 +8,8 @@ window.onload = function() {
 
 window.onunload = function() {
   setTimeout(function() {
-    set_loop();
+    document.body.style.display = "none";
+    location.reload();
   }, 1000)
 }
 
