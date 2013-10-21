@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>iframe</title>
+<script type="text/javascript">
+window.onload = function() {
+  set_loop();
+}
+
+window.onunload = function() {
+  setTimeout(function() {
+    document.body.style.display = "none";
+    location.reload();
+  }, 100)
+}
+
+function set_loop() {
+  var count = 0;
+  var loop = function() {
+    document.getElementById("num").innerHTML = (count++);
+    setTimeout(loop, 100);
+  };
+  loop();
+}
+</script>
+</head>
+<body>
+<div id="num"></div>
+</body>
+</html>
